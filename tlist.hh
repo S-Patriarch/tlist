@@ -14,14 +14,11 @@ namespace tl {
       std::string  m_fileConfig;  // файл конфигурации списка задач
    public:
       TaskList()
+         : m_filePath{}, m_fileData{}, m_fileConfig{}
       {
          const char* dir {"HOME"};
          char* dirHome = std::getenv(dir);
-         if (dirHome==nullptr) {
-            m_filePath = "";
-            m_fileData = "";
-            m_fileConfig = "";
-         } else {
+         if (dirHome!=nullptr) {
             m_filePath = static_cast<std::string>(dirHome)+"/.tlist";
             m_fileData = m_filePath+"/tlist";
             m_fileConfig = m_filePath+"/tlistrc";
