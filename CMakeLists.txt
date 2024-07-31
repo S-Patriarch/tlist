@@ -3,7 +3,7 @@ project(tlist)
 set(CMAKE_BUILD_TYPE Release)
 set(SOURCES
    main.cc
-   info.cc
+   info_out_terminal.cc
    check_files.cc
 )
 add_executable(${PROJECT_NAME} ${SOURCES})
