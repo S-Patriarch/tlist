@@ -8,10 +8,10 @@
 namespace tl {
   class TaskList {
     using multimap_t = std::unordered_multimap<std::string,std::string>;
-    multimap_t*  m_hashTable;  // основная хэш-таблица списка задач
-    std::string  m_filePath;   // директория списка задач
-    std::string  m_fileData;   // файл списка задач
-    std::string  m_fileConfig; // файл конфигурации списка задач
+    multimap_t*  m_hashTable;
+    std::string  m_filePath;
+    std::string  m_fileData;
+    std::string  m_fileConfig;
   public:
     TaskList()
       : m_filePath{}, m_fileData{}, m_fileConfig{}
