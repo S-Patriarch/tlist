@@ -2,11 +2,10 @@
 #include <iostream>
 
 namespace tl {
-  void TaskList::info()
+  void TaskList::info() const
     // функция выводит логотип, справку и приглашение к работе
   {
     std::cout << "Task list. Version 1.0.0\n"
-              << "(c) 2024 S-Patriarch\n"
               << "\nCommands:\n"
               << "  a - add entry\n"
               << "  d - delete entry\n"
