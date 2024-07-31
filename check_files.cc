@@ -8,7 +8,9 @@ namespace tl {
     // функция проверяет служебные файлы
     // если какого-то файла нет, то он создается
   {
-    if (m_filePath!="") {
+    if (m_filePath=="") {
+      return false;
+    } else {
       const char* dirPath = m_filePath.c_str();
       mkdir(dirPath,0700);
 
@@ -19,7 +21,7 @@ namespace tl {
         if (!fs.is_open()) return false;
         else fs.close();
       }
+      return true;
     }
-    return true;
   }
 }
