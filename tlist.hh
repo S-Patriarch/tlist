@@ -31,7 +31,7 @@ namespace tl {
       m_hashTable = nullptr;
     }
 
-    void info() const;
+    void info_out_terminal() const;
     bool check_files() const;
   };
 }
