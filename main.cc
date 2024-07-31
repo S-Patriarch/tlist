@@ -1,5 +1,9 @@
-// (c) 2024 S-Patriarch
-// Task list (список задач).
+/*
+ * Copyright (C) 2024, S-Patriarch.
+ *
+ * Список задач.
+ * Данный проект реализуется под дивизом "Слабоумие и Отвага".
+ */
 
 #include "tlist.hh"
 #include "pl/conio.hh"
@@ -7,19 +11,19 @@
 
 int main()
 {
-   using std::cout;
-   using std::cerr;
-   using std::endl;
+  using std::cout;
+  using std::cerr;
+  using std::endl;
 
-   tl::TaskList tlist;
+  tl::TaskList tlist;
 
-   if (!tlist.check_files()) {
-      cerr << "E: service files chack failed" << endl;
-      std::exit(EXIT_FAILURE);
-   }
+  if (!tlist.check_files()) {
+    cerr << "E: служебные файлы не прошли проверку" << endl;
+    std::exit(EXIT_FAILURE);
+  }
 
-   cout << pl::mr::clrscr;
-   tlist.info();
+  cout << pl::mr::clrscr;
+  tlist.info();
 
-   std::exit(EXIT_SUCCESS);
+  std::exit(EXIT_SUCCESS);
 }
