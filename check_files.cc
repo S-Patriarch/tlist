@@ -5,8 +5,6 @@
 
 namespace tl {
   bool TaskList::check_files() const
-    // функция проверяет служебные файлы
-    // если какого-то файла нет, то он создается
   {
     if (m_filePath=="") {
       return false;

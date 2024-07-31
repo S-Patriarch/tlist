@@ -3,7 +3,6 @@
 
 namespace tl {
   void TaskList::info_out_terminal() const
-    // функция выводит логотип, справку и приглашение к работе
   {
     std::cout << "Список задач. Версия 1.0.0\n"
               << '\n'
