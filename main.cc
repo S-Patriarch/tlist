@@ -28,8 +28,8 @@ int main()
 
   std::string enterCommand = tlist.enter_command();
   for (;;) {
-    if (strncmp("q",enterCommand.c_str(),1)==0
-      || strncmp("Q",enterCommand.c_str(),1)==0) {
+    if (strncmp("q", enterCommand.c_str(), 1) == 0
+      || strncmp("Q", enterCommand.c_str(), 1) == 0) {
       cout << "\nW: до новых встреч\n" << endl;
       std::exit(EXIT_SUCCESS);
     }
