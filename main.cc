@@ -37,7 +37,7 @@ int main()
       std::exit(EXIT_SUCCESS);
     } else if (strncmp("a", enterCommand.c_str(), 1) == 0
       || strncmp("A", enterCommand.c_str(), 1) == 0) {
-      tlist.add_note();
+      tlist.add_entry();
     }
     cout << pl::mr::clrscr;
     tlist.info_out_terminal();
