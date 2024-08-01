@@ -6,6 +6,7 @@
  */
 
 #include "tlist.hh"
+#include "pl/color.hh"
 #include "pl/conio.hh"
 #include <iostream>
 
@@ -30,8 +31,13 @@ int main()
   for (;;) {
     if (strncmp("q", enterCommand.c_str(), 1) == 0
       || strncmp("Q", enterCommand.c_str(), 1) == 0) {
-      cout << "\nW: до новых встреч\n" << endl;
+      cout << pl::mr::bold << "\nW: " << pl::mr::reset
+           << "до новых встреч\n"
+           << endl;
       std::exit(EXIT_SUCCESS);
+    } else if (strncmp("a", enterCommand.c_str(), 1) == 0
+      || strncmp("A", enterCommand.c_str(), 1) == 0) {
+      tlist.add_note();
     }
     cout << pl::mr::clrscr;
     tlist.info_out_terminal();
