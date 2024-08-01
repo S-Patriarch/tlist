@@ -2,7 +2,7 @@
  * Copyright (C) 2024, S-Patriarch.
  *
  * Список задач.
- * Данный проект реализуется под дивизом "Слабоумие и Отвага".
+ * Данный проект реализуется под девизом "Слабоумие и Отвага".
  */
 
 #include "tlist.hh"
@@ -37,6 +37,4 @@ int main()
     tlist.info_out_terminal();
     enterCommand = tlist.enter_command();
   }
-
-  std::exit(EXIT_SUCCESS);
 }
