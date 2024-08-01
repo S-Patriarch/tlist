@@ -8,6 +8,7 @@
 namespace tl {
   class TaskList {
     using multimap_t = std::unordered_multimap<std::string,std::string>;
+
     multimap_t*  m_hashTable;
     std::string  m_filePath;
     std::string  m_fileData;
@@ -25,14 +26,15 @@ namespace tl {
       }
       m_hashTable = new multimap_t;
     }
+    
     ~TaskList()
     {
       delete m_hashTable;
       m_hashTable = nullptr;
     }
 
-    void info_out_terminal() const;
     bool check_files() const;
+    void info_out_terminal() const;
     std::string enter_command() const;
   };
 }
