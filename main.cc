@@ -38,6 +38,9 @@ int main()
     } else if (strncmp("a", enterCommand.c_str(), 1) == 0
       || strncmp("A", enterCommand.c_str(), 1) == 0) {
       tlist.add_entry();
+    } else if (strncmp("v", enterCommand.c_str(), 1) == 0
+      || strncmp("V", enterCommand.c_str(), 1) == 0) {
+      tlist.view_entry();
     }
     cout << pl::mr::clrscr;
     tlist.info_out_terminal();
