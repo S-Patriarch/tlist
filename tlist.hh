@@ -33,6 +33,7 @@ namespace tl {
 
     void info_out_terminal() const;
     bool check_files() const;
+    std::string enter_command() const;
   };
 }
 

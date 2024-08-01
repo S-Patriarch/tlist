@@ -14,6 +14,7 @@ int main()
   using std::cout;
   using std::cerr;
   using std::endl;
+  using std::strncmp;
 
   tl::TaskList tlist;
 
@@ -23,7 +24,19 @@ int main()
   }
 
   cout << pl::mr::clrscr;
-  tlist.info();
+  tlist.info_out_terminal();
+
+  std::string enterCommand = tlist.enter_command();
+  for (;;) {
+    if (strncmp("q",enterCommand.c_str(),1)==0
+      || strncmp("Q",enterCommand.c_str(),1)==0) {
+      cout << "\nW: до новых встреч\n" << endl;
+      std::exit(EXIT_SUCCESS);
+    }
+    cout << pl::mr::clrscr;
+    tlist.info_out_terminal();
+    enterCommand = tlist.enter_command();
+  }
 
   std::exit(EXIT_SUCCESS);
 }
