@@ -5,6 +5,7 @@ set(SOURCES
   main.cc
   info_out_terminal.cc
   check_files.cc
+  add_note.cc
 )
 add_executable(${PROJECT_NAME} ${SOURCES})
 set_target_properties(
