@@ -7,22 +7,22 @@
 
 namespace tl {
   class TaskList {
-    using multimap_t = std::unordered_multimap<std::string,std::string>;
+    using multimap_t = std::unordered_multimap<std::string, std::string>;
 
-    multimap_t*  m_hashTable;
-    std::string  m_filePath;
-    std::string  m_fileData;
-    std::string  m_fileConfig;
+    multimap_t* m_hashTable;
+    std::string m_filePath;
+    std::string m_fileData;
+    std::string m_fileConfig;
   public:
     TaskList()
       : m_filePath{}, m_fileData{}, m_fileConfig{}
     {
       const char* dir {"HOME"};
       char* dirHome = std::getenv(dir);
-      if (dirHome!=nullptr) {
-        m_filePath = static_cast<std::string>(dirHome)+"/.tlist";
-        m_fileData = m_filePath+"/tlist";
-        m_fileConfig = m_filePath+"/tlistrc";
+      if (dirHome != nullptr) {
+        m_filePath = static_cast<std::string>(dirHome) + "/.tlist";
+        m_fileData = m_filePath + "/tlist";
+        m_fileConfig = m_filePath + "/tlistrc";
       }
       m_hashTable = new multimap_t;
     }
