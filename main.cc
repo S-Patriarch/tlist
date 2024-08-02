@@ -29,9 +29,8 @@ int main()
   tl::out_info_logo();
 
   std::string enterCommand = tl::enter_command();
+  bool isFlageClrScr {true};
   for (;;) {
-    bool isFlageClrScr {true};
-
     if (strncmp("?", enterCommand.c_str(), 1) == 0
       || strncmp("h", enterCommand.c_str(), 1) == 0
       || strncmp("H", enterCommand.c_str(), 1) == 0) {
@@ -48,16 +47,17 @@ int main()
     } else if (strncmp("a", enterCommand.c_str(), 1) == 0
       || strncmp("A", enterCommand.c_str(), 1) == 0) {
       tlist.add_entry();
+      isFlageClrScr = true;
     } else if (strncmp("v", enterCommand.c_str(), 1) == 0
       || strncmp("V", enterCommand.c_str(), 1) == 0) {
       tlist.view_entry();
+      isFlageClrScr = true;
     }
 
     if (isFlageClrScr) {
       cout << pl::mr::clrscr;
       tl::out_info_logo();
-    } else {
-      enterCommand = tl::enter_command();
-    }
+    } 
+    enterCommand = tl::enter_command();
   }
 }
