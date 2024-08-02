@@ -3,9 +3,11 @@ project(tlist)
 set(CMAKE_BUILD_TYPE Release)
 set(SOURCES
   main.cc
-  info_out_terminal.cc
   check_files.cc
-  add_note.cc
+  out_info_logo.cc
+  out_info_help.cc
+  add_entry.cc
+  view_entry.cc
 )
 add_executable(${PROJECT_NAME} ${SOURCES})
 set_target_properties(
