@@ -40,7 +40,7 @@ int main()
       isFlageClrScr = false;
     } else if (strncmp("q", enterCommand.c_str(), 1) == 0
       || strncmp("Q", enterCommand.c_str(), 1) == 0) {
-      cout << pl::mr::bold << "\nW: " << pl::mr::reset
+      cout << pl::mr::bold << "W: " << pl::mr::reset
            << "до новых встреч\n"
            << endl;
       std::exit(EXIT_SUCCESS);
