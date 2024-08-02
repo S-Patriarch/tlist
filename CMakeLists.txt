@@ -6,6 +6,7 @@ set(SOURCES
   check_files.cc
   out_info_logo.cc
   out_info_help.cc
+  enter_command.cc
   add_entry.cc
   view_entry.cc
 )
