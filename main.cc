@@ -6,6 +6,7 @@
  */
 
 #include "tlist.hh"
+#include "other.hh"
 #include "pl/color.hh"
 #include "pl/conio.hh"
 #include <iostream>
@@ -25,11 +26,20 @@ int main()
   }
 
   cout << pl::mr::clrscr;
-  tlist.info_out_terminal();
+  tl::out_info_logo();
 
-  std::string enterCommand = tlist.enter_command();
+  std::string enterCommand = tl::enter_command();
   for (;;) {
-    if (strncmp("q", enterCommand.c_str(), 1) == 0
+    bool isFlageClrScr {true};
+
+    if (strncmp("?", enterCommand.c_str(), 1) == 0
+      || strncmp("h", enterCommand.c_str(), 1) == 0
+      || strncmp("H", enterCommand.c_str(), 1) == 0) {
+      cout << pl::mr::clrscr;
+      tl::out_info_logo();
+      tl::out_info_help();
+      isFlageClrScr = false;
+    } else if (strncmp("q", enterCommand.c_str(), 1) == 0
       || strncmp("Q", enterCommand.c_str(), 1) == 0) {
       cout << pl::mr::bold << "\nW: " << pl::mr::reset
            << "до новых встреч\n"
@@ -42,8 +52,12 @@ int main()
       || strncmp("V", enterCommand.c_str(), 1) == 0) {
       tlist.view_entry();
     }
-    cout << pl::mr::clrscr;
-    tlist.info_out_terminal();
-    enterCommand = tlist.enter_command();
+
+    if (isFlageClrScr) {
+      cout << pl::mr::clrscr;
+      tl::out_info_logo();
+    } else {
+      enterCommand = tl::enter_command();
+    }
   }
 }

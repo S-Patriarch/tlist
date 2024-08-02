@@ -34,8 +34,6 @@ namespace tl {
     }
 
     bool check_files() const;
-    void info_out_terminal() const;
-    std::string enter_command() const;
     void add_entry();
     void view_entry() const;
   };
