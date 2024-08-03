@@ -3,16 +3,22 @@
 
 #include <cstdlib>
 #include <string>
+#include <iostream>
 #include <unordered_map>
 
-namespace tl {
-  class TaskList {
-    using multimap_t = std::unordered_multimap<std::string, std::string>;
+using std::cout;
+using std::cerr;
+using std::endl;
+using std::string;
 
+namespace tl {
+  using multimap_t = std::unordered_multimap<string, string>;
+
+  class TaskList {
     multimap_t* m_hashTable;
-    std::string m_filePath;
-    std::string m_fileData;
-    std::string m_fileConfig;
+    string m_filePath;
+    string m_fileData;
+    string m_fileConfig;
   public:
     TaskList()
       : m_filePath{}, m_fileData{}, m_fileConfig{}
@@ -20,7 +26,7 @@ namespace tl {
       const char* dir {"HOME"};
       char* dirHome = std::getenv(dir);
       if (dirHome != nullptr) {
-        m_filePath = static_cast<std::string>(dirHome) + "/.tlist";
+        m_filePath = static_cast<string>(dirHome) + "/.tlist";
         m_fileData = m_filePath + "/tlist";
         m_fileConfig = m_filePath + "/tlistrc";
       }

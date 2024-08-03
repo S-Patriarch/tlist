@@ -1,10 +1,11 @@
+#include "other.hh"
 #include "pl/conio.hh"
 
 namespace tl {
-  std::string enter_command()
+  string enter_command()
   {
     pl::Conio conio;
-    std::cout << "> ";
+    cout << "> ";
     return conio.get_line(3);
   }
 }

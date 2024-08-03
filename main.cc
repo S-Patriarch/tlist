@@ -9,13 +9,9 @@
 #include "other.hh"
 #include "pl/color.hh"
 #include "pl/conio.hh"
-#include <iostream>
 
 int main()
 {
-  using std::cout;
-  using std::cerr;
-  using std::endl;
   using std::strncmp;
 
   tl::TaskList tlist;
@@ -28,7 +24,8 @@ int main()
   cout << pl::mr::clrscr;
   tl::out_info_logo();
 
-  std::string enterCommand = tl::enter_command();
+  pl::Color color;
+  string enterCommand = tl::enter_command();
   bool isFlageClrScr {true};
   for (;;) {
     if (strncmp("?", enterCommand.c_str(), 1) == 0
@@ -40,7 +37,8 @@ int main()
       isFlageClrScr = false;
     } else if (strncmp("q", enterCommand.c_str(), 1) == 0
       || strncmp("Q", enterCommand.c_str(), 1) == 0) {
-      cout << pl::mr::bold << "W: " << pl::mr::reset
+      cout << color.esc_tb(pl::Color::color::BLUE) << "W: "
+           << color.esc_c()
            << "до новых встреч\n"
            << endl;
       std::exit(EXIT_SUCCESS);
