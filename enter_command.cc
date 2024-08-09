@@ -1,5 +1,5 @@
-#include "other.hh"
-#include "pl/conio.hh"
+#include "other.h"
+#include "pl/conio.h"
 
 namespace tl {
   string enter_command()

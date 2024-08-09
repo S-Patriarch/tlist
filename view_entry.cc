@@ -1,6 +1,6 @@
-#include "tlist.hh"
-#include "pl/color.hh"
-#include "pl/conio.hh"
+#include "tlist.h"
+#include "pl/color.h"
+#include "pl/conio.h"
 
 namespace tl {
   void TaskList::view_entry() const

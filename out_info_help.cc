@@ -1,5 +1,5 @@
-#include "other.hh"
-#include "pl/dt.hh"
+#include "other.h"
+#include "pl/dt.h"
 
 namespace tl {
   void out_info_help()

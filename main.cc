@@ -5,10 +5,10 @@
  * Данный проект реализуется под девизом "Слабоумие и Отвага".
  */
 
-#include "tlist.hh"
-#include "other.hh"
-#include "pl/color.hh"
-#include "pl/conio.hh"
+#include "tlist.h"
+#include "other.h"
+#include "pl/color.h"
+#include "pl/conio.h"
 
 int main()
 {

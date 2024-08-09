@@ -1,5 +1,5 @@
-#include "tlist.hh"
-#include "pl/color.hh"
+#include "tlist.h"
+#include "pl/color.h"
 #include <utility>
 
 namespace tl {

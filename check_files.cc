@@ -1,4 +1,4 @@
-#include "tlist.hh"
+#include "tlist.h"
 #include <fstream>
 #include <sys/stat.h>
 #include <array>

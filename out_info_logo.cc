@@ -1,6 +1,6 @@
-#include "other.hh"
-#include "pl/dt.hh"
-#include "pl/color.hh"
+#include "other.h"
+#include "pl/dt.h"
+#include "pl/color.h"
 
 namespace tl {
   void out_info_logo()
